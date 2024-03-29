@@ -56,8 +56,8 @@ jobs:
           cd ../builds
 
           # Make it easier to deal with the names by setting up a var
-          export build_file_name=${RENPY_PROJECT_BUILD_NAME}-${RENPY_PROJECT_CONFIG_VERSION}
-          
+          build_file_name=${RENPY_PROJECT_BUILD_NAME}-${RENPY_PROJECT_CONFIG_VERSION}
+          export build_file_name
           # Push to itch for various build types.
           
           butler push ${build_file_name}-win.zip ${butler_user_slash_game}:windows-${GITHUB_REF_NAME}
